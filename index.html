@@ -1,0 +1,53 @@
+<html>
+<head>
+	<title> pizza app  </title>
+	<style>
+			*{ font-size: 50px;
+				font-family: Arial;
+			}
+			body
+			{
+				background-color: lightgrey;
+			}
+	</style>
+	<script>
+			function show()
+			{
+			event.preventDefault();
+			let name = document.getElementById("id_name");
+			let msg= document.getElementById("id_msg");
+			let cheese = document.getElementById("id_cheese");
+			let tomato= document.getElementById("id_tomato");
+			let onion= document.getElementById("id_onion");
+			let corn = document.getElementById("id_corn");
+			
+			let toppings = "";
+			if (cheese.checked)				toppings = toppings + = "cheese";
+			if (tomato.checked)				toppings = toppings + = "tomato";
+			if (onion.checked)				toppings = toppings + = "onion";
+			if (corn.checked)				toppings = toppings + = "corn";
+			
+
+			let ans = "name = " + name.value + " toppings" + topping;
+			msg.innerHTML = ans;
+
+			}
+	</script>
+</head>
+<body>
+<center>
+		<h1> pizza App </h1>
+		<form onsubmit = "show()">
+		<input type = "text" placeholder="Enter ur name" id="id_name">
+		<br><br>
+		<input type="checkbox"  id="id_cheese" /> cheese
+		<input type="checkbox" id="id_tomato" /> tomato
+		<input type="checkbox" id="id_onion" /> onion
+		<input type="checkbox" id="id_corn" /> corn
+		<br><br>
+		<input type="submit" value="order" />
+		</form>
+		<h2 id="id_msg"/>
+</center>
+</body>
+</html>
